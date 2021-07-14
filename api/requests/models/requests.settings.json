@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requests",
+  "info": {
+    "name": "requests"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "requestName": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "POSTPONED",
+        "INPROGRESS",
+        "CANCELED",
+        "REJECTED",
+        "APPROVED",
+        "COMPLETED"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "expireDate": {
+      "type": "date"
+    },
+    "emails": {
+      "type": "json"
+    },
+    "username": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "rawData": {
+      "type": "json"
+    },
+    "submissionDate": {
+      "type": "datetime"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
